@@ -21,13 +21,13 @@ public class TransactionsController {
 	@Autowired
 	private TransactionsRepo transactionsRepo;
 	
-	@GetMapping("/events")
+	@GetMapping("/transactions")
 	public List<Transactions> getAllusers(){
 		return transactionsRepo.findAll();	
 		
 		
 	}
-	@PostMapping("/events")
+	@PostMapping("/transactions")
 	public Transactions transactions(@RequestBody Transactions transactions){
 		return transactionsRepo.save(transactions);	
 
